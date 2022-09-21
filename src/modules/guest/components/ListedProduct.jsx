@@ -1,12 +1,17 @@
 import React from "react";
-import { Image } from "antd";
+import Card from "antd/lib/card/Card";
+import Col from "antd/es/grid/col";
 
-function ListedProduct(product) {
+function ListedProduct({ image, title }) {
+  console.log(image);
+
   return (
-    <div className="col-1">
-      <Image height={100} src={`${product.imageUrl}`} />
-      <p>{product.title}</p>
-    </div>
+    <Col>
+      <Card hoverable bordered={false}>
+        <img height={300} src={image} alt="hola" />
+        <p>{title}</p>
+      </Card>
+    </Col>
   );
 }
 

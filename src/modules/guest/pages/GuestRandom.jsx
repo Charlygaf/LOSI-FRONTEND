@@ -5,14 +5,14 @@ import env from "react-dotenv";
 import { Container, Row } from "react-grid-system";
 import ListedProduct from "../components/ListedProduct";
 
-export default function GuestProducts() {
+export default function GuestRandom() {
   const [products, setProducts] = useState([]);
 
   const getAllProducts = async () => {
     try {
       const { data } = await axios({
         method: "get",
-        url: `${process.env.REACT_APP_API_URL}products`,
+        url: `${process.env.REACT_APP_API_URL}content`,
       });
 
       return data;
@@ -33,11 +33,11 @@ export default function GuestProducts() {
       <Header />
       <Container>
         <Row justify="center" className="center">
-          {products?.map((product, index) => (
+          {products?.map((item, index) => (
             <ListedProduct
               key={index}
-              image={product.imageUrl}
-              title={product.title}
+              image={item.imageUrl}
+              title={item.title}
             />
           ))}
         </Row>

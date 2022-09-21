@@ -8,7 +8,7 @@ export default function GuestHome() {
       <div className="col-6">
         <h1 className="logoText">LOSI</h1>
         <YoutubeEmbed embedId={"MYSP8-rhnSk"} videoTitle={"losi 1"} />
-        <Link to="/products">Products</Link>
+        <Link to="/random">home</Link>
       </div>
     </div>
   );
