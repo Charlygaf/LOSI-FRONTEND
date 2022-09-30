@@ -7,7 +7,7 @@ function Header() {
   return (
     <Container fluid>
       <Row justify="center">
-        <Col className="textCenter" style={{ height: "100px" }}>
+        <Col className="textCenter" style={{ height: "50px" }}>
           <Breadcrumb>
             <Breadcrumb.Item>
               <Link to="/">Home</Link>
@@ -17,6 +17,9 @@ function Header() {
             </Breadcrumb.Item>
             <Breadcrumb.Item>
               <Link to="/art">Artss</Link>
+            </Breadcrumb.Item>
+            <Breadcrumb.Item>
+              <Link to="/videos">Videos</Link>
             </Breadcrumb.Item>
           </Breadcrumb>
         </Col>

@@ -1,22 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const YoutubeEmbed = ({ embedId, videoTitle }) => (
-  <div className="video-responsive">
+const YoutubeEmbed = ({ embedId }) => (
+  <div className="">
     <iframe
-      width="853"
-      height="480"
-      src={`https://www.youtube.com/embed/${embedId}`}
+      src={`https://www.youtube.com/embed/${embedId}?autoplay=1 `}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
-      title={`${videoTitle}`}
+      title={`1`}
+      width="853"
+      height="480"
     />
   </div>
 );
 
 YoutubeEmbed.propTypes = {
-  embedId: PropTypes.string.isRequired
+  embedId: PropTypes.string.isRequired,
 };
 
 export default YoutubeEmbed;
