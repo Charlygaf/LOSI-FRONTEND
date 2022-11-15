@@ -16,7 +16,9 @@ export default function GuestHome() {
       <Row justify="center" align="middle" style={{ marginTop: 100 }}>
         <Col xs={6} className="center">
           <Link to="/random" className="logoTest">
-            ENTRAR >>>{" "}
+            ENTRAR {">"}
+            {">"}
+            {">"}{" "}
           </Link>
         </Col>
       </Row>{" "}

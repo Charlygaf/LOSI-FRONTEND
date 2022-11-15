@@ -15,7 +15,7 @@ export default function GuestVideos() {
         method: "get",
         url: "https://youtube.googleapis.com/youtube/v3/search?channelId=UC_mWwfR4quoI36yc5NGvWIg&type=video&key=AIzaSyBXD0LgRSB8rA69HhCie9Hb_M00448DG-M",
       });
-
+      console.log(data);
       return data;
     } catch (error) {
       console.error(error);
@@ -25,8 +25,9 @@ export default function GuestVideos() {
     getMyChannelVieos().then((data) => {
       setvideos(data.items.map((item) => item.id.videoId));
     });
+
     console.log(videos);
-  }, [videos]);
+  }, []);
 
   return (
     <>
